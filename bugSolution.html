@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+  <script>
+    //Correct way to add eventlistener using event delegation
+    document.addEventListener("click", function(event){
+       if(event.target.id === "myDiv"){
+         alert('Correct way using event delegation');
+       }
+    });
+  </script>
+</body>
+</html>

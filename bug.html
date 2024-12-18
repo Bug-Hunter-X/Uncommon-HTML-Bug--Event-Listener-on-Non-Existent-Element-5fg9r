@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+  <script>
+    //Incorrect way to add eventlistener
+    document.getElementById("myDiv").addEventListener("click", function(){
+      alert('Incorrect way');
+    });
+    //Correct way to add eventlistener
+    document.addEventListener("click", function(event){
+       if(event.target.id === "myDiv"){
+         alert('Correct way');
+       }
+    });
+  </script>
+</body>
+</html>
